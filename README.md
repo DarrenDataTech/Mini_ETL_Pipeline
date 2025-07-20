@@ -45,9 +45,7 @@ config/db_config.yaml: Stores connection strings, table names, etc.
 
 requirements.txt: Use pip freeze > requirements.txt to capture deps.
 
-README.md: Explain your project, setup, and what you’ve learned.
-
-tests/: Optional but adds polish — even a single test adds credibility.
+tests/: Optional.
 
 ## Tech Stack
 
