@@ -1,6 +1,10 @@
 # Mini_ETL_Pipeline
 
-My mini ETL pipeline to demonstrate Data Engineering skills. This is to show case my knowledge when applying for Data Engineering roles.
+My mini ETL pipeline to demonstrate Data Engineering skills.
+
+## Author
+
+Built by Darren Patterson — aspiring Data Engineer, with hands-on DBA experience and a passion for backend data workflows.
 
 ## REPO structure
 
@@ -45,3 +49,36 @@ requirements.txt: Use pip freeze > requirements.txt to capture deps.
 README.md: Explain your project, setup, and what you’ve learned.
 
 tests/: Optional but adds polish — even a single test adds credibility.
+
+## Tech Stack
+
+| Tool                   | Purpose                                                                 |
+|------------------------|-------------------------------------------------------------------------|
+| Python 3.x             | Main programming language used for the ETL logic.                       |
+| PostgreSQL             | Target database to store the transformed data.                          |
+| psycopg2               | Connects Python to PostgreSQL to execute queries.                       |
+| YAML                   | Configuration format used in `db_config.yaml` for DB settings.          |
+| python-dotenv          | Loads environment variables from `.env` file for secure credentials.    |
+| pandas                 | For data cleaning and transformation during the ETL process.            |
+| logging                | To track ETL progress, errors, and debug info in `logs/etl.log`.        |
+| pytest                 | Testing ETL modules to ensure correct functionality.                    |
+| Git                    | Version control and sharing the project via GitHub.                     |
+| Docker                 | Optionally run PostgreSQL in a local container for isolated testing.    |
+
+## Pipeline Flow
+
+1. __Extract__:  
+   - Read data from a CSV or static source using `extract.py`.
+
+2. __Transform__:  
+   - Clean and reshape data using `pandas`.
+
+3. __Load__:  
+   - Insert processed data into a PostgreSQL table using SQLAlchemy in `load.py`.
+
+4. __Configuration__:  
+   - Use `config/db_config.yaml` for database parameters.
+   - Store sensitive info (like passwords) in `.env`.
+
+5. __Execution__:  
+   - `main.py` runs the ETL pipeline end-to-end and logs the process using Python's `logging`.
