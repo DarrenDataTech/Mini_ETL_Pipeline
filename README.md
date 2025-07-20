@@ -53,7 +53,7 @@ tests/: Optional but adds polish — even a single test adds credibility.
 
 | Tool                   | Purpose                                                                 |
 |------------------------|-------------------------------------------------------------------------|
-| Python 3.x             | Main programming language used for the ETL logic.                       |
+| Python 3.13            | Main programming language used for the ETL logic.                       |
 | PostgreSQL             | Target database to store the transformed data.                          |
 | psycopg2               | Connects Python to PostgreSQL to execute queries.                       |
 | YAML                   | Configuration format used in `db_config.yaml` for DB settings.          |
