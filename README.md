@@ -10,7 +10,7 @@ Built by Darren Patterson — aspiring Data Engineer, with hands-on DBA experien
 
 Mini_ETL_Pipeline/
 ├── etl/                    # Main ETL logic (modular scripts)
-│   ├── __init__.py
+│   ├── init.py
 │   ├── extract.py
 │   ├── transform.py
 │   └── load.py
@@ -29,7 +29,6 @@ Mini_ETL_Pipeline/
 │   └── test_etl.py
 │
 ├── .env                    # Environment variables (not committed)
-├── .gitignore              # Ignore sensitive and unnecessary files
 ├── requirements.txt        # Python dependencies
 ├── main.py                 # Entry point to run your ETL job
 └── README.md               # Project overview, how to run, etc.
