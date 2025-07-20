@@ -31,6 +31,7 @@ Mini_ETL_Pipeline/
 └── README.md               # Project overview, how to run, etc.
 
 ### Break down of key files
+
 main.py: Coordinates the full ETL process (calls extract → transform → load).
 
 etl/*.py: Each script does one job. Keeps code reusable and clean.
