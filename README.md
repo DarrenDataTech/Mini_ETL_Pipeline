@@ -29,3 +29,18 @@ Mini_ETL_Pipeline/
 ├── requirements.txt        # Python dependencies
 ├── main.py                 # Entry point to run your ETL job
 └── README.md               # Project overview, how to run, etc.
+
+### Break down of key files
+main.py: Coordinates the full ETL process (calls extract → transform → load).
+
+etl/*.py: Each script does one job. Keeps code reusable and clean.
+
+config/db_config.yaml: Stores connection strings, table names, etc.
+
+.env: For secure credentials (used with python-dotenv if needed).
+
+requirements.txt: Use pip freeze > requirements.txt to capture deps.
+
+README.md: Explain your project, setup, and what you’ve learned.
+
+tests/: Optional but adds polish — even a single test adds credibility.
